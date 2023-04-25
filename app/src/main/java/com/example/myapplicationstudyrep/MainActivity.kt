@@ -1,6 +1,7 @@
 package com.example.myapplicationstudyrep
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,6 +20,8 @@ class MainActivity : ComponentActivity() {
             MyApplicationStudyRepTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+                    println("hi mylog")
+                    Log.e("mylog", this.javaClass.simpleName)
                     Greeting("Android")
                 }
             }
@@ -40,4 +43,8 @@ fun GreetingPreview() {
     MyApplicationStudyRepTheme {
         Greeting("Android")
     }
+}
+
+fun main() {
+    println("Hello world")
 }
